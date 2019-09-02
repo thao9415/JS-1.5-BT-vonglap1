@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = 0;    //khai báo số kiểm tra chia hết cho 7 bắt đầu từ 1
+    let total = 0;  //tổng các số chia hết cho 7 đầu tiên bằng 0
+    let count = 0;  //Khai báo biến đếm, mục đích đếm đủ 30 số chia hết cho 7
+    for (num; count <= 30; num++) {     //vietsub nếu count nhỏ hơn 31 thì chạy vòng lặp kiểm tra num%7
+        if (num % 7 === 0) {
+            total = total + num;        //nếu num chia hết 7, tổng = tổng ban đầu + số num chia hết 7 đó
+            count++;
+            document.write(num+" ")
+        }
+    }
+    document.write("<br>");
+    document.write("Tổng 30 số chia hết cho 7 = "+ total);
+</script>
+</body>
+</html>

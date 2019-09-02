@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhập vào số lượng số nguyên tố muốn in ra :</p>
+<input type="text" id="soluong">
+<button onclick="inra()" type="button"></button>
+<p id="prime"></p>
+<script>
+    //Thuật toán check 1 số có là số nguyên tố hay ko:
+    function isPrime(num) {
+        let x;
+        if (x === 1) {
+            return false;
+        }
+        if (x === 2) {
+            return true
+        }
+        for (let i = 1; i < x; i++) {
+            if (x % i === 0)
+                return false;
+            } else return true;
+        }
+    }
+    //Thuật toán in ra số nguyên tố:
+    function inra() {
+        let num=parseInt(document.getElementById(soluong));
+        let count=0;
+        let text='';
+        let i=1;
+        while (count<num) {
+            if (isPrime(i)) {
+                count++;
+                text=i+'';
+            }i++;
+        }
+        let show = document.getElementById("prime");
+        show.innerHTML = text;
+    }
+</script>
+
+
+</body>
+
+</html>
